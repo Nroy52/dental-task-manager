@@ -25,5 +25,11 @@ app.use('/rota', rotaRouter);
 app.use('/notifications', notificationsRouter);
 app.use('/reports', reportsRouter);
 
+// ...existing code...
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => console.log(`Backend listening on http://localhost:${PORT}`));
+const HOST = '0.0.0.0';
+
+app.listen(PORT, HOST, () => {
+  console.log(`Backend listening on ${HOST}:${PORT}`);
+});
+// ...existing code...

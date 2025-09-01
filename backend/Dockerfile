@@ -9,4 +9,5 @@ ENV NODE_ENV=production
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 EXPOSE 8000
-CMD ["node", "src/index.js"]
+# ...existing code...
+CMD ["node", "src/index.js", "--host", "0.0.0.0", "--port", "8000"]
